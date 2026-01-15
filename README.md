@@ -6,7 +6,7 @@
 | PUT         | /api/rooms/:id | แก้ไขข้อมูลห้อง (Staff)           | `{room_name, building, floor, capacity, facilities}` | `{room}`           | 200         |
 | GET         | /api/bookings             | ดึงการจองทั้งหมด (Staff) | –                                                        | `[ {booking}, ... ]` | 200         |
 | GET         | /api/bookings/my          | ดึงการจองของตัวเอง       | –                                                        | `[ {booking}, ... ]` | 200         |
-| POST        | /api/bookings             | สร้างการจองใหม่          | `{room_id, booking_date, purpose}` | `{booking}`          | 201         |
+| POST        | /api/bookings             | สร้างการจองใหม่          | `{room_id, booking_date,start_time, end_time, purpose}` | `{booking}`          | 201         |
 | DELETE      | /api/bookings/:id         | ยกเลิกการจอง             | –                                                        | `{message}`          | 200         |
 | PATCH       | /api/bookings/:id/approve | อนุมัติการจอง (Staff)    | `{status}`                                               | `{booking}`          | 200         |
 | POST        | /api/auth/register | สมัครสมาชิก    | `{name, email, password, role}` | `{message}`           | 201         |
